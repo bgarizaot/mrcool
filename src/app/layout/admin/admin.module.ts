@@ -9,8 +9,17 @@ import { ComponentsModule } from './components/components.module';
 import { ComponentsDashboardModule } from './pages/dashboard/components/components.module';
 import { AdminComponent } from './admin.component';
 
+import { SidebarModule } from 'primeng/sidebar';
+import { OrdersComponent } from './pages/orders/orders.component';
+
 @NgModule({
-  declarations: [DashboardComponent, AdminComponent],
-  imports: [CommonModule, AdminRoutingModule, ComponentsModule,ComponentsDashboardModule],
+  declarations: [DashboardComponent, AdminComponent, OrdersComponent],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    ComponentsModule,
+    ComponentsDashboardModule,
+    SidebarModule,
+  ],
 })
 export class AdminModule {}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuAdminService } from './menu-admin.service';
 
 @Component({
   selector: 'menuAdmin',
@@ -7,49 +7,9 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './menu-admin.component.scss',
 })
 export class MenuAdminComponent {
-  items: MenuItem[] | undefined;
+  constructor(public menuAdminS: MenuAdminService) {}
 
   ngOnInit() {
-    this.items = [
-      {
-        label: '',
-        items: [
-          {
-            label: 'Panel',
-            icon: 'pi pi-objects-column',
-            styleClass: 'menuActive',
-          },
-          {
-            label: 'Calendario',
-            icon: 'pi pi-calendar',
-          },
-        ],
-      },
-      {
-        label: 'Documentos',
-        items: [
-          {
-            label: 'Ordenes',
-            icon: 'pi pi-book',
-          },
-        ],
-      },
-      {
-        label: 'Perfiles',
-        items: [
-          {
-            label: 'Clientes',
-            icon: 'pi pi-user',
-          },
-          {
-            label: 'Empleados',
-            icon: 'pi pi-briefcase',
-          },
-        ],
-      },
-      {
-        separator: true,
-      },
-    ];
+    this.menuAdminS.onRenderMenu();
   }
 }

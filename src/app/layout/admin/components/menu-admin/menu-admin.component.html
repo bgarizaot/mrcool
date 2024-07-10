@@ -1,5 +1,5 @@
-<p-menu 
-  [model]="items"
+<p-menu
+  [model]="menuAdminS.items"
   styleClass="w-full flex flex-column h-full"
   class="contMenuAdmin w-full"
 >
@@ -7,7 +7,11 @@
     <span class="text-primary font-bold">{{ item.label }}</span>
   </ng-template>
   <ng-template pTemplate="item" let-item>
-    <a pRipple class="flex align-items-center p-menuitem-link">
+    <a
+      pRipple
+      class="flex align-items-center p-menuitem-link"
+      (click)="menuAdminS.onSelectedMenu(item)"
+    >
       <span [class]="item.icon"></span>
       <span class="ml-2">{{ item.label }}</span>
       <p-badge *ngIf="item.badge" class="ml-auto" [value]="item.badge" />
