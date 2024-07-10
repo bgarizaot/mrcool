@@ -1,0 +1,9 @@
+.contAdmin {
+  .contHeader {
+    height: 65px;
+  }
+
+  .contBody {
+    height: calc(100% - 65px);
+  }
+}

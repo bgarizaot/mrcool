@@ -1,0 +1,38 @@
+::ng-deep {
+  .contMenuAdmin {
+    .p-menu {
+      border: 0;
+      padding: 0;
+      .p-menuitem-separator {
+        display: none;
+      }
+
+      .p-submenu-header:first-child {
+        display: none;
+      }
+
+      .p-menu-list {
+        height: 100%;
+        overflow-y: auto;
+      }
+
+      .menuActive {
+        font-weight: bold;
+        position: relative;
+        span {
+          color: white;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background: var(--primary-color);
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          // opacity: 0.5;
+        }
+      }
+    }
+  }
+}

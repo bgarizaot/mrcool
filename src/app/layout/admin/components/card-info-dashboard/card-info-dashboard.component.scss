@@ -1,0 +1,12 @@
+::ng-deep {
+  .contCardInfoDashboard {
+    .p-card-body,
+    .p-card-content {
+      padding: 0;
+    }
+
+    .contValues {
+      text-align-last: end;
+    }
+  }
+}

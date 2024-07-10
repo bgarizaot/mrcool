@@ -1,0 +1,13 @@
+<div class="flex flex-column contAdmin h-screen">
+  <div class="col-12 contHeader">
+    <headerAdmin />
+  </div>
+  <div class="col-12 flex p-0 contBody overflow-hidden">
+    <div class="hidden lg:flex lg:col-3 p-0">
+      <menuAdmin class="flex w-full" />
+    </div>
+    <div class="col-12 lg:col-9 px-3 overflow-y-auto contBackGroud">
+      <router-outlet />
+    </div>
+  </div>
+</div>
