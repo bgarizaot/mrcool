@@ -1,0 +1,35 @@
+<div class="card bg-white shadow-1 p-2 border-round">
+  <p class="font-bold">Clientes</p>
+  <div class="grid mt-2">
+    <div
+      class="col-12 flex align-items-center justify-content-between pr-4 cursor-pointer"
+      *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]; let i = index"
+      pRipple
+    >
+      <div class="flex align-items-center">
+        <div
+          class="w-2rem h-2rem flex align-items-center justify-content-center bg-primary text-xs border-circle"
+        >
+          BG
+        </div>
+        <p class="ml-2">Brooklyn Simmons</p>
+      </div>
+      <i
+        class="pi pi-crown text-lg"
+        *ngIf="i == 0 || i == 1 || i == 2"
+        [ngClass]="{
+          colorGold: i == 0,
+          colorSilver: i == 1,
+          colorBronze: i == 2
+        }"
+      ></i>
+    </div>
+  </div>
+  <p-button
+    label="Ver Todos"
+    icon="pi pi-arrow-right"
+    iconPos="right"
+    size="small"
+    styleClass="w-full"
+  />
+</div>

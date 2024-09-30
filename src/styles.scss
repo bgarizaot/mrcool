@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --colorGold: #ffd700;
+  --colorSilver: #c0c0c0; 
+  --colorBronze: #cd7f32;
+}
+
 @layer reset, primeng;
 
 @layer reset {
@@ -16,7 +22,16 @@
       box-shadow: none;
     }
   }
-  .contBackGroud{
-    background-color: #EBEFF5;
+  .contBackGroud {
+    background-color: #ebeff5;
+  }
+  .colorGold {
+    color: var(--colorGold);
+  }
+  .colorSilver {
+    color: var(--colorSilver);
+  }
+  .colorBronze {
+    color: var(--colorBronze);
   }
 }

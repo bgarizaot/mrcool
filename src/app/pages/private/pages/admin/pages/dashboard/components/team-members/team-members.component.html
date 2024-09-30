@@ -1,0 +1,28 @@
+<div class="card bg-white shadow-1 p-2 border-round">
+  <div class="flex align-items-center justify-content-between">
+    <p class="font-bold">Estado del trablajo por miembro</p>
+    <p class="text-sm">30/09/2024</p>
+  </div>
+  <div class="grid mt-2">
+    <div
+      class="col-12 cursor-pointer"
+      pRipple
+      *ngFor="let item of [10, 23, 36, 45, 51, 68, 75]; let i = index"
+    >
+      <div class="grid">
+        <div class="col-5">
+          <p class="">Bryan Garizao</p>
+        </div>
+        <div class="col-7 flex justify-content-center">
+          <p-progressBar
+            [value]="item"
+            [showValue]="false"
+            styleClass="h-1rem"
+            class="w-full"
+          />
+          <p class="ml-1 text-xs">{{ item }}%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

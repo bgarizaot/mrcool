@@ -6,7 +6,6 @@ import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { OrdersComponent } from './pages/orders/orders.component';
-import { ClientsComponent } from './pages/clients/clients.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 
 const routes: Routes = [
@@ -28,7 +27,10 @@ const routes: Routes = [
       },
       {
         path: 'clients',
-        component: ClientsComponent,
+        loadChildren: () =>
+          import('./pages/clients/clients-routing.module').then(
+            (m) => m.ClientsRoutingModule
+          ),
       },
       {
         path: 'employees',

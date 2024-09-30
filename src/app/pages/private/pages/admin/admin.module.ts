@@ -8,19 +8,17 @@ import { ComponentsModule } from './components/components.module';
 
 import { ComponentsDashboardModule } from './pages/dashboard/components/components.module';
 import { AdminComponent } from './admin.component';
-
-import { SidebarModule } from 'primeng/sidebar';
 import { OrdersComponent } from './pages/orders/orders.component';
-import { ClientsComponent } from './pages/clients/clients.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     AdminComponent,
     OrdersComponent,
-    ClientsComponent,
     EmployeesComponent,
     CalendarComponent,
   ],
@@ -29,6 +27,7 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
     AdminRoutingModule,
     ComponentsModule,
     ComponentsDashboardModule,
+    // primeng
     SidebarModule,
   ],
 })

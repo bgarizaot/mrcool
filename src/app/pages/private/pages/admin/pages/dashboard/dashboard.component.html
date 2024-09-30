@@ -5,6 +5,7 @@
         <cardInfoDashboard
           title="Clientes"
           value="361"
+          class="cursor-pointer"
           icon="pi pi-user"
         ></cardInfoDashboard>
       </div>
@@ -12,6 +13,7 @@
         <cardInfoDashboard
           title="Empleados"
           value="13"
+          class="cursor-pointer"
           icon="pi pi-briefcase"
         ></cardInfoDashboard>
       </div>
@@ -19,6 +21,7 @@
         <cardInfoDashboard
           title="Total Ordenes"
           value="928"
+          class="cursor-pointer"
           icon="pi pi-inbox"
         ></cardInfoDashboard>
       </div>
@@ -28,13 +31,16 @@
   <div class="col-12 contChart">
     <div class="grid">
       <div class="col-12">
-        <h2>Ordenes</h2>
+        <monthsChart />
       </div>
       <div class="col sm:col-6">
         <stateOrders />
       </div>
       <div class="col sm:col-6">
-        <monthsChart />
+        <customers />
+      </div>
+      <div class="col-12">
+        <teamMembers />
       </div>
     </div>
   </div>

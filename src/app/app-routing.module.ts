@@ -3,15 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'admin',
+    path: '',
     loadChildren: () =>
-      import('./layout/admin/admin.module').then((m) => m.AdminModule),
-  },
-  {
-    path: 'maintenance',
-    loadChildren: () =>
-      import('./layout/maintenance/maintenance.module').then(
-        (m) => m.MaintenanceModule
+      import('./pages/private/private-routing.module').then(
+        (m) => m.PrivateRoutingModule
       ),
   },
 ];
