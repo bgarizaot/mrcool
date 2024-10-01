@@ -1,5 +1,11 @@
 <div class="grid">
-  <div class="col-12"></div>
+  <div class="col-12 text-right mt-2">
+    <p-button
+      label="Crear nuevo cliente"
+      size="small"
+      (click)="showNewClient = true"
+    />
+  </div>
   <div class="col-12">
     <div class="card bg-white shadow-1 p-2 border-round">
       <p-table
@@ -14,7 +20,9 @@
       >
         <ng-template pTemplate="caption">
           <div class="flex flex-column sm:flex-row">
-            <span class="p-input-icon-left mr-auto w-full sm:w-auto mb-2 sm:mb-0">
+            <span
+              class="p-input-icon-left mr-auto w-full sm:w-auto mb-2 sm:mb-0"
+            >
               <i class="pi pi-search"></i>
               <input
                 pInputText
@@ -32,9 +40,10 @@
                 styleClass="btnPrimaryOutlined"
               />
               <p-button
-                label="Importar archivos de excel"
+                label="Importar o Exportar excel"
                 size="small"
                 severity="success"
+                (click)="onImportExportExcel()"
               />
             </div>
           </div>
@@ -82,12 +91,14 @@
                   [text]="true"
                   icon="pi pi-eye"
                   [plain]="true"
+                  [routerLink]="['/admin/clients/details/' + item.id]"
                 />
                 <p-button
                   size="small"
                   [text]="true"
                   icon="pi pi-pencil"
                   [plain]="true"
+                  (click)="showNewClient = true"
                 />
               </p-buttonGroup>
             </td>
@@ -104,3 +115,5 @@
     </div>
   </div>
 </div>
+
+<createClientMod [visible]="showNewClient" (hidden)="showNewClient = false" />

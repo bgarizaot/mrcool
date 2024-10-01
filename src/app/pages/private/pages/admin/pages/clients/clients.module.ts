@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ClientsRoutingModule } from './clients-routing.module';
+import { ComponentsDialogModule } from '../../componentsDialog/components-dialog.module';
+
 import { DetailsComponent } from './pages/details/details.component';
 import { ListComponent } from './pages/list/list.component';
 
@@ -17,6 +19,7 @@ import { TagModule } from 'primeng/tag';
   imports: [
     CommonModule,
     ClientsRoutingModule,
+    ComponentsDialogModule,
     // primeng
     TableModule,
     ButtonModule,

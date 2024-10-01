@@ -1,5 +1,6 @@
 const listClients = [
   {
+    id: 1,
     name: 'Maria Carolina Molinares',
     type: 'Persona',
     typeDocu: 'Cédula de ciudadanía',
@@ -8,6 +9,7 @@ const listClients = [
     status: 'Activo',
   },
   {
+    id: 2,
     name: 'Distribuciones Y Representaciones Electricas Sociedad Por Acciones Simplificadas',
     type: 'Empresa',
     typeDocu: 'Nit',
@@ -16,6 +18,7 @@ const listClients = [
     status: 'Inactivo',
   },
   {
+    id: 3,
     name: 'Maria Ahumada',
     type: 'Persona',
     typeDocu: 'Cédula de ciudadanía',
@@ -24,6 +27,7 @@ const listClients = [
     status: 'Activo',
   },
   {
+    id: 4,
     name: 'Rosmarey Avila',
     type: 'Persona',
     typeDocu: 'Cédula de ciudadanía',
@@ -32,6 +36,7 @@ const listClients = [
     status: 'Activo',
   },
   {
+    id: 5,
     name: 'Margarita Rincón García',
     type: 'Persona',
     typeDocu: 'Cédula de ciudadanía',
@@ -40,6 +45,7 @@ const listClients = [
     status: 'Activo',
   },
   {
+    id: 6,
     name: 'Jose Fernando Leiva',
     type: 'Persona',
     typeDocu: 'Cédula de ciudadanía',

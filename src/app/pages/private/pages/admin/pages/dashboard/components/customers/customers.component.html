@@ -5,6 +5,7 @@
       class="col-12 flex align-items-center justify-content-between pr-4 cursor-pointer"
       *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]; let i = index"
       pRipple
+      (click)="onNav(i)"
     >
       <div class="flex align-items-center">
         <div

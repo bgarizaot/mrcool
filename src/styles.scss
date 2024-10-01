@@ -44,13 +44,26 @@
   .colorBronze {
     color: var(--colorBronze);
   }
-  .buttonGroup{
-    .p-button-group{
+  .buttonGroup {
+    .p-button-group {
       display: flex;
-      .p-button-plain{
+      .p-button-plain {
         padding: 6px !important;
       }
     }
+  }
+  .min-h-2rem {
+    min-height: 2rem;
+  }
+  .selectStyle,
+  .inputStyle {
+    width: 100%;
+    .p-dropdown {
+      width: 100%;
+    }
+  }
+  .p-dialog-content {
+    min-height: 15rem;
   }
   // tables
   .tableStyle {
