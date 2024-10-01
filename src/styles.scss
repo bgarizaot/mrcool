@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+  --colorPrimary: #598bff;
+  --colorWhite: #ffffff;
   --colorGold: #ffd700;
-  --colorSilver: #c0c0c0; 
+  --colorSilver: #c0c0c0;
   --colorBronze: #cd7f32;
 }
 
@@ -11,15 +13,23 @@
   * {
     margin: 0;
   }
+  body {
+    margin: 0;
+  }
+  .p-button,
   button,
   input,
-  textarea {
+  textarea,
+  select,
+  .p-focus {
+    box-shadow: none !important;
+
     &:focus {
-      box-shadow: none;
+      box-shadow: none !important;
     }
     &:focus-visible {
-      outline: none;
-      box-shadow: none;
+      outline: none !important;
+      box-shadow: none !important;
     }
   }
   .contBackGroud {
@@ -33,5 +43,41 @@
   }
   .colorBronze {
     color: var(--colorBronze);
+  }
+  .buttonGroup{
+    .p-button-group{
+      display: flex;
+      .p-button-plain{
+        padding: 6px !important;
+      }
+    }
+  }
+  // tables
+  .tableStyle {
+    .p-datatable-header {
+      background: transparent !important;
+      border: 0 !important;
+    }
+    .p-datatable-thead {
+      th {
+        background: transparent !important;
+      }
+    }
+    .p-paginator {
+      border: 0 !important;
+      justify-content: end !important;
+    }
+    .p-paginator-last,
+    .p-paginator-first {
+      display: none !important;
+    }
+    .p-paginator-page {
+      min-width: 2.2rem !important;
+      height: 2.2rem !important;
+    }
+    .p-paginator-page.p-highlight {
+      background-color: var(--colorPrimary) !important;
+      color: var(--colorWhite) !important;
+    }
   }
 }

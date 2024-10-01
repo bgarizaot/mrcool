@@ -5,15 +5,25 @@ import { ClientsRoutingModule } from './clients-routing.module';
 import { DetailsComponent } from './pages/details/details.component';
 import { ListComponent } from './pages/list/list.component';
 
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { ButtonGroupModule } from 'primeng/buttongroup';
+import { RippleModule } from 'primeng/ripple';
+import { InputTextModule } from 'primeng/inputtext';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
-  declarations: [
-    DetailsComponent,
-    ListComponent
-  ],
+  declarations: [DetailsComponent, ListComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule
-  ]
+    ClientsRoutingModule,
+    // primeng
+    TableModule,
+    ButtonModule,
+    RippleModule,
+    InputTextModule,
+    TagModule,
+    ButtonGroupModule,
+  ],
 })
-export class ClientsModule { }
+export class ClientsModule {}
