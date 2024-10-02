@@ -1,9 +1,9 @@
 <div class="grid">
   <div class="col-12 text-right mt-2">
     <p-button
-      label="Crear nuevo cliente"
+      label="Crear nuevo empleado"
       size="small"
-      (click)="showNewClient = true"
+      (click)="showNewEmplyees = true"
     />
   </div>
   <div class="col-12">
@@ -39,12 +39,6 @@
                 class="mr-2"
                 styleClass="btnPrimaryOutlined"
               />
-              <p-button
-                label="Importar o Exportar excel"
-                size="small"
-                severity="success"
-                (click)="onImportExportExcel()"
-              />
             </div>
           </div>
         </ng-template>
@@ -54,7 +48,6 @@
             <th>Tipo</th>
             <th>Tipo Documento</th>
             <th>Identificación</th>
-            <th>Teléfono</th>
             <th>Estado</th>
             <th>Acción</th>
           </tr>
@@ -74,9 +67,6 @@
               {{ item.identif }}
             </td>
             <td class="text-sm">
-              {{ item.phone }}
-            </td>
-            <td class="text-sm">
               <p-tag
                 [severity]="generalS.getSeverity(item.status)"
                 [value]="item.status"
@@ -92,14 +82,14 @@
                   [text]="true"
                   icon="pi pi-eye"
                   [plain]="true"
-                  [routerLink]="['/admin/clients/details/' + item.id]"
+                  [routerLink]="['/admin/employees/details/' + item.id]"
                 />
                 <p-button
                   size="small"
                   [text]="true"
                   icon="pi pi-pencil"
                   [plain]="true"
-                  (click)="showNewClient = true"
+                  (click)="showNewEmplyees = true"
                 />
                 <p-button
                   size="small"
@@ -115,7 +105,7 @@
         <ng-template pTemplate="emptymessage">
           <tr>
             <td colspan="7">
-              <p class="colorPrimary">No hay solicitudes de parámetros</p>
+              <p class="colorPrimary">No hay solicitudes de empleados</p>
             </td>
           </tr>
         </ng-template>
@@ -124,4 +114,4 @@
   </div>
 </div>
 
-<createClientMod [visible]="showNewClient" (hidden)="showNewClient = false" />
+<createEmployees [visible]="showNewEmplyees" (hidden)="showNewEmplyees = false" />

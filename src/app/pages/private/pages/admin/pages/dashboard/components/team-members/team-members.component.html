@@ -8,6 +8,7 @@
       class="col-12 cursor-pointer"
       pRipple
       *ngFor="let item of [10, 23, 36, 45, 51, 68, 75]; let i = index"
+      (click)="onNav(i)"
     >
       <div class="grid">
         <div class="col-5">

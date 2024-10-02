@@ -58,8 +58,12 @@
   .selectStyle,
   .inputStyle {
     width: 100%;
-    .p-dropdown {
+    .p-dropdown,
+    .p-password {
       width: 100%;
+      input {
+        width: 100%;
+      }
     }
   }
   .p-dialog-content {

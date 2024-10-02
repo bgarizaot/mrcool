@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrivateModule } from './pages/private/private.module';
 import { AdminModule as privateAdminModule } from './pages/private/pages/admin/admin.module';
 import { ClientsModule as privateClientsModule } from './pages/private/pages/admin/pages/clients/clients.module';
+import { EmployeesModule as privateEmployeesModule } from './pages/private/pages/admin/pages/employees/employees.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { ClientsModule as privateClientsModule } from './pages/private/pages/adm
     PrivateModule,
     privateAdminModule,
     privateClientsModule,
+    privateEmployeesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

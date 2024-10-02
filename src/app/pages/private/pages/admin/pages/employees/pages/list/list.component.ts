@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import listClients from '../../data/listClient';
+import listEmployees from '../../data/listEmployees';
 
 import { Table } from 'primeng/table';
 
@@ -15,9 +15,9 @@ import Swal from 'sweetalert2';
 export class ListComponent {
   @ViewChild('dt') dt1!: Table;
 
-  showNewClient: boolean = false;
+  showNewEmplyees: boolean = false;
 
-  customers: any[] = listClients;
+  customers: any[] = listEmployees;
   loading: boolean = false;
 
   constructor(public generalS: GeneralService) {}
@@ -26,21 +26,6 @@ export class ListComponent {
     const value = (event.target as HTMLInputElement).value;
     this.dt1.filterGlobal(value, 'contains');
   }
-
-  onImportExportExcel = () => {
-    Swal.fire({
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: `Importar Excel`,
-      cancelButtonText: `Exportar Excel`,
-    }).then((result) => {
-      if (result.isConfirmed) {
-        console.log('Importar');
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        console.log('Exportar');
-      }
-    });
-  };
 
   onStatus = (ev: any) => {
     Swal.fire({
