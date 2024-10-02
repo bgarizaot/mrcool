@@ -5,7 +5,6 @@ import { AdminComponent } from './admin.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
-import { OrdersComponent } from './pages/orders/orders.component';
 
 const routes: Routes = [
   {
@@ -22,7 +21,10 @@ const routes: Routes = [
       },
       {
         path: 'orders',
-        component: OrdersComponent,
+        loadChildren: () =>
+          import('./pages/orders/orders-routing.module').then(
+            (m) => m.OrdersRoutingModule
+          ),
       },
       {
         path: 'clients',

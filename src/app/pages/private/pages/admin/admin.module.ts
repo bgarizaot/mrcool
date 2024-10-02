@@ -8,7 +8,6 @@ import { ComponentsModule } from './components/components.module';
 
 import { ComponentsDashboardModule } from './pages/dashboard/components/components.module';
 import { AdminComponent } from './admin.component';
-import { OrdersComponent } from './pages/orders/orders.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 
 import { SidebarModule } from 'primeng/sidebar';
@@ -17,7 +16,6 @@ import { SidebarModule } from 'primeng/sidebar';
   declarations: [
     DashboardComponent,
     AdminComponent,
-    OrdersComponent,
     CalendarComponent,
   ],
   imports: [
