@@ -42,6 +42,29 @@
     <div class="col-12 sm:col-6">
       <input type="email" pInputText class="inputStyle" placeholder="Email" />
     </div>
+    <div class="col-6">
+      <p-calendar
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+        [timeOnly]="true"
+        placeholder="Horario de atención"
+      >
+        <ng-template pTemplate="inputicon" let-clickCallBack="clickCallBack">
+          <i
+            class="pi pi-clock pointer-events-none"
+            (click)="clickCallBack($event)"
+          ></i>
+        </ng-template>
+      </p-calendar>
+    </div>
+    <div class="col-6">
+      <p-inputNumber
+        placeholder="Periocidad"
+        inputId="mes"
+        suffix=" Mes"
+        class="inputStyleNum"
+      />
+    </div>
     <div class="col-12 sm:col-6">
       <input type="text" pInputText class="inputStyle" placeholder="Telefono" />
     </div>
@@ -65,7 +88,48 @@
       />
     </div>
     <div class="col-12">
+      <div class="grid">
+        <div class="col-12">
+          <p-button
+            label="Agregar equipo"
+            size="small"
+            (click)="showCrearProduc = true"
+          />
+        </div>
+        <div class="col-12">
+          <div class="flex flex-wrap gap-2">
+            <div *ngFor="let item of objProduct">
+              <div class="border-1 border-round p-2 flex gap-2">
+                <div>
+                  <div class="flex align-items-center">
+                    <p>Marca:</p>
+                    <span class="font-bold ml-1">{{ item.marca }}</span>
+                  </div>
+                  <div class="flex align-items-center">
+                    <p>Modelo:</p>
+                    <span class="font-bold ml-1">{{ item.modelo }}</span>
+                  </div>
+                  <div class="flex align-items-center">
+                    <p>Área:</p>
+                    <span class="font-bold ml-1">{{ item.area }}</span>
+                  </div>
+                  <div class="flex align-items-center">
+                    <p>Capacidad:</p>
+                    <span class="font-bold ml-1">{{ item.capacidad }}</span>
+                  </div>
+                </div>
+
+                <i class="pi pi-times-circle cursor-pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
       <p-button label="Crear" size="small" class="w-full" styleClass="w-full" />
     </div>
   </div>
 </p-dialog>
+
+<crearProducts [visible]="showCrearProduc" (create)="onCreateProduct()" />

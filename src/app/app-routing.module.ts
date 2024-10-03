@@ -9,6 +9,11 @@ const routes: Routes = [
         (m) => m.PrivateRoutingModule
       ),
   },
+  {
+    path: '',
+    redirectTo: '/admin/dashboard',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

@@ -8,9 +8,21 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
+import { CalendarModule } from 'primeng/calendar';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CrearProductsComponent } from './crear-products/crear-products.component';
+
 @NgModule({
-  declarations: [CreateClientComponent, CreateEmployeesComponent],
-  exports: [CreateClientComponent, CreateEmployeesComponent],
+  declarations: [
+    CreateClientComponent,
+    CreateEmployeesComponent,
+    CrearProductsComponent,
+  ],
+  exports: [
+    CreateClientComponent,
+    CreateEmployeesComponent,
+    CrearProductsComponent,
+  ],
   imports: [
     CommonModule,
     // primeng
@@ -19,6 +31,8 @@ import { PasswordModule } from 'primeng/password';
     InputTextModule,
     ButtonModule,
     PasswordModule,
+    CalendarModule,
+    InputNumberModule,
   ],
 })
 export class ComponentsDialogModule {}

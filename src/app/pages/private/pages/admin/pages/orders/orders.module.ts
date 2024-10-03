@@ -13,6 +13,7 @@ import { ButtonGroupModule } from 'primeng/buttongroup';
 import { RippleModule } from 'primeng/ripple';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [DetailsComponent, ListComponent],
@@ -27,6 +28,7 @@ import { TagModule } from 'primeng/tag';
     InputTextModule,
     TagModule,
     ButtonGroupModule,
+    CalendarModule,
   ],
 })
 export class OrdersModule {}

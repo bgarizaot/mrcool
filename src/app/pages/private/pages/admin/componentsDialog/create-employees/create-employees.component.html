@@ -2,13 +2,13 @@
   header="Crear Empleado"
   [(visible)]="visible"
   [modal]="true"
-  [breakpoints]="{ '1199px': '75vw', '575px': '95vw' }"
-  [style]="{ width: '60vw' }"
+  [breakpoints]="{ '1199px': '90vw', '575px': '95vw' }"
+  [style]="{ width: '60vw', height: '100vh' }"
   [draggable]="false"
   [resizable]="false"
   (onHide)="onHidden()"
 >
-  <div class="grid">
+  <div class="grid h-full">
     <div class="col-12 sm:col-6">
       <p-dropdown
         [options]="[{ name: 'Persona' }]"
@@ -39,9 +39,50 @@
     <div class="col-12 sm:col-6">
       <input type="text" pInputText class="inputStyle" placeholder="Apellido" />
     </div>
+    <div class="col-12 sm:col-6">
+      <input type="email" pInputText class="inputStyle" placeholder="Email" />
+    </div>
+    <div class="col-12 sm:col-6">
+      <p-inputNumber
+        mode="decimal"
+        inputId="phone"
+        [useGrouping]="false"
+        placeholder="Telefono"
+        class="inputStyleNum"
+      />
+    </div>
+    <div class="col-12 sm:col-4">
+      <input
+        type="text"
+        pInputText
+        class="inputStyle"
+        placeholder="Placa de la moto"
+      />
+    </div>
+    <div class="col-12 sm:col-4">
+      <input type="text" pInputText class="inputStyle" placeholder="EPS" />
+    </div>
+    <div class="col-12 sm:col-4">
+      <input type="text" pInputText class="inputStyle" placeholder="ARL" />
+    </div>
+    <div class="col-12 sm:col-6">
+      <input
+        type="text"
+        pInputText
+        class="inputStyle"
+        placeholder="Tipo de sangre"
+      />
+    </div>
+    <div class="col-12 sm:col-6">
+      <p-calendar placeholder="Fecha de ingreso" />
+    </div>
 
     <div class="col-12">
-      <p-password class="inputStyle" [feedback]="false" placeholder="Contraseña" />
+      <p-password
+        class="inputStyle"
+        [feedback]="false"
+        placeholder="Contraseña"
+      />
     </div>
     <div class="col-12">
       <p-button label="Crear" size="small" class="w-full" styleClass="w-full" />

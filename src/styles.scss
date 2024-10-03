@@ -56,10 +56,13 @@
     min-height: 2rem;
   }
   .selectStyle,
-  .inputStyle {
+  .inputStyle,
+  .p-calendar,
+  .inputStyleNum {
     width: 100%;
     .p-dropdown,
-    .p-password {
+    .p-password,
+    .p-inputnumber {
       width: 100%;
       input {
         width: 100%;
@@ -68,6 +71,11 @@
   }
   .p-dialog-content {
     min-height: 15rem;
+    display: flex;
+    align-items: center;
+  }
+  .p-datepicker table td {
+    padding: 0 !important;
   }
   // tables
   .tableStyle {

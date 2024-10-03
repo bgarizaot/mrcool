@@ -14,6 +14,11 @@ const routes: Routes = [
         (m) => m.MaintenanceModule
       ),
   },
+  {
+    path: '',
+    redirectTo: '/admin/dashboard',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

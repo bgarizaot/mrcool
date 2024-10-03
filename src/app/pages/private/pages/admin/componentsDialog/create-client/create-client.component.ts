@@ -9,7 +9,52 @@ export class CreateClientComponent {
   @Input() visible!: boolean;
   @Output() hidden = new EventEmitter();
 
+  showCrearProduc: boolean = false;
+  objProduct: any = [];
+
   onHidden = () => {
     this.hidden.emit();
+  };
+
+  onCreateProduct = () => {
+    this.showCrearProduc = false;
+    this.objProduct = [
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+      {
+        marca: 'Marca',
+        modelo: 'Modelo',
+        area: 'Área',
+        capacidad: 'Capacidad',
+      },
+    ];
   };
 }

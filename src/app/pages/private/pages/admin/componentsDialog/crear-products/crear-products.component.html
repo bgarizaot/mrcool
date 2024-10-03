@@ -1,0 +1,39 @@
+<p-dialog
+  header="Crear Producto"
+  [(visible)]="visible"
+  [modal]="true"
+  [breakpoints]="{ '1199px': '40vw', '575px': '95vw' }"
+  [style]="{ width: '40vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  (onHide)="onHidden()"
+>
+  <div class="grid h-full">
+    <div class="col-12 sm:col-6">
+      <input type="text" pInputText class="inputStyle" placeholder="Marca" />
+    </div>
+    <div class="col-12 sm:col-6">
+      <input type="text" pInputText class="inputStyle" placeholder="Modelo" />
+    </div>
+    <div class="col-12 sm:col-6">
+      <input type="text" pInputText class="inputStyle" placeholder="Área" />
+    </div>
+    <div class="col-12 sm:col-6">
+      <input
+        type="text"
+        pInputText
+        class="inputStyle"
+        placeholder="Capacidad"
+      />
+    </div>
+    <div class="col-12">
+      <p-button
+        label="Crear"
+        size="small"
+        class="w-full"
+        styleClass="w-full"
+        (click)="onCreate()"
+      />
+    </div>
+  </div>
+</p-dialog>
