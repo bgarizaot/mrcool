@@ -26,22 +26,7 @@ export class ListComponent {
     const value = (event.target as HTMLInputElement).value;
     this.dt1.filterGlobal(value, 'contains');
   }
-
-  onImportExportExcel = () => {
-    Swal.fire({
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: `Importar Excel`,
-      cancelButtonText: `Exportar Excel`,
-    }).then((result) => {
-      if (result.isConfirmed) {
-        console.log('Importar');
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        console.log('Exportar');
-      }
-    });
-  };
-
+  
   onStatus = (ev: any) => {
     Swal.fire({
       icon: 'question',
@@ -59,18 +44,7 @@ export class ListComponent {
     });
   };
 
-  onDelete = (ev: any) => {
-    Swal.fire({
-      icon: 'question',
-      title: '¿Estás seguro de eliminar?',
-      showCancelButton: true,
-      confirmButtonText: `Si`,
-      cancelButtonText: `No`,
-    }).then((result) => {
-      if (result.isConfirmed) {
-        console.log('Eliminado');
-        this.customers = this.customers.filter((item) => item.id !== ev.id);
-      }
-    });
+  onPdfElement = (ev: any) => {
+    console.log(ev);
   };
 }

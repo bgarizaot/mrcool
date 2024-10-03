@@ -39,22 +39,16 @@
                 class="mr-2"
                 styleClass="btnPrimaryOutlined"
               />
-              <p-button
-                label="Importar o Exportar excel"
-                size="small"
-                severity="success"
-                (click)="onImportExportExcel()"
-              />
             </div>
           </div>
         </ng-template>
         <ng-template pTemplate="header">
           <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Tipo Documento</th>
-            <th>Identificación</th>
-            <th>Teléfono</th>
+            <th>Orden de servicio</th>
+            <th>Cliente</th>
+            <th>Empleado</th>
+            <th>Descripción</th>
+            <th>Fecha y Hora Inicio-Fin</th>
             <th>Estado</th>
             <th>Acción</th>
           </tr>
@@ -62,19 +56,19 @@
         <ng-template pTemplate="body" let-item>
           <tr>
             <td class="text-sm">
-              {{ item.name }}
+              {{ item.ordenServicio }}
             </td>
             <td class="text-sm">
-              {{ item.type }}
+              {{ item.cliente }}
             </td>
             <td class="text-sm">
-              {{ item.typeDocu }}
+              {{ item.empleado }}
             </td>
             <td class="text-sm">
-              {{ item.identif }}
+              {{ item.descripcion }}
             </td>
             <td class="text-sm">
-              {{ item.phone }}
+              {{ item.fecha }}
             </td>
             <td class="text-sm">
               <p-tag
@@ -104,9 +98,9 @@
                 <p-button
                   size="small"
                   [text]="true"
-                  icon="pi pi-trash"
+                  icon="pi pi-file-pdf"
                   [plain]="true"
-                  (click)="onDelete(item)"
+                  (click)="onPdfElement(item)"
                 />
               </p-buttonGroup>
             </td>

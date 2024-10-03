@@ -10,11 +10,17 @@ export class GeneralService {
     switch (status.toLowerCase()) {
       case 'activo':
         return 'success';
+      case 'terminado':
+        return 'success';
 
       case 'inactivo':
         return 'warning';
+      case 'proceso':
+        return 'warning';
 
       case 'denegado':
+        return 'danger';
+      case 'cancelado':
         return 'danger';
 
       default:
